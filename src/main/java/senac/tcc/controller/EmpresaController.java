@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -34,7 +35,16 @@ public class EmpresaController {
     public void adiciona(@RequestBody Empresa empresa) {
        service.salvar(empresa);
     }
-		
+	
+	@RequestMapping("/cu")
+	@GET
+	public Empresa teste() {
+		Empresa empresa = new Empresa();
+		empresa.setNome("teste");
+		empresa.setEndereco("teste");
+		empresa.setId(1);
+		return empresa;
+	}
 	@CrossOrigin(origins = "http://localhost:8080")
 	@ResponseBody
 	@Produces(MediaType.APPLICATION_JSON)
