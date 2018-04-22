@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import senac.tcc.api.empresas.model.Categoria;
-import senac.tcc.api.empresas.model.Residuo;
 import senac.tcc.services.CategoriaService;
 
 @RestController
