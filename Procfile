@@ -1,1 +1,1 @@
-web: java -jar -Dserver.port=$PORT target/people-on-map-site.war
+web: java -Dserver.port=$PORT -jar comment-store/target/sbb-comment-app.jar

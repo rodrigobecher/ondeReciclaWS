@@ -1,11 +1,8 @@
 package senac.tcc.controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -16,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import senac.tcc.api.empresas.model.Empresa;
 import senac.tcc.services.EmpresaService;
@@ -36,15 +31,6 @@ public class EmpresaController {
        service.salvar(empresa);
     }
 	
-	@RequestMapping("/cu")
-	@GET
-	public Empresa teste() {
-		Empresa empresa = new Empresa();
-		empresa.setNome("teste");
-		empresa.setEndereco("teste");
-		empresa.setId(1);
-		return empresa;
-	}
 	@CrossOrigin(origins = "http://localhost:8080")
 	@ResponseBody
 	@Produces(MediaType.APPLICATION_JSON)
